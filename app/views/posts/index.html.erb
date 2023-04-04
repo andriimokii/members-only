@@ -1,0 +1,11 @@
+<% @posts.each do |post| %>
+  <%= content_tag :div, class: "post" do %>
+    <% if user_signed_in? %>
+      <p>Author: <%= post.user.username %></p>
+    <% end %>
+
+    <p><%= post.title %></p>
+    <p><%= post.body %></p>
+  <% end %>
+<% end %>
+
